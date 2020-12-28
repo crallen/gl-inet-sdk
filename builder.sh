@@ -1,6 +1,5 @@
-# !/usr/bin/env bash
-
-set -e
+#!/bin/bash
+set -euo pipefail
 
 work_dir="$PWD"
 sdk_dir="sdk"
@@ -145,8 +144,3 @@ done
 }
 
 [ $COMFILE_ALL = 0 ] && compile_single_target
-
-
-
-
-
