@@ -1,9 +1,6 @@
 name: ci
 
-on:
-  push:
-    tags:
-      - ar71xx-*
+on: [push, pull_request]
 
 jobs:
   build-image:
@@ -30,5 +27,5 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          push: true
-          tags: crallen/gl-inet-sdk:${{ steps.get-version.outputs.version }}
+          push: ${{ github.ref == 'refs/heads/master' }}
+          tags: crallen/gl-inet-sdk:latest
