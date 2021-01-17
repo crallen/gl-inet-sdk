@@ -6,7 +6,7 @@ RUN echo "America/Chicago" > /etc/timezone && \
     apt-get update && \
     apt-get install -y asciidoc bash bc binutils bzip2 fastjar flex gawk gcc genisoimage \
                        gettext git intltool jikespg libgtk2.0-dev libncurses5-dev libssl-dev make \
-                       mercurial patch perl-modules python2.7-dev python3==3.6.5 rsync ruby sdcc \
+                       mercurial patch perl-modules python2.7-dev python3=3.6.5 rsync ruby sdcc \
                        subversion sudo time unzip util-linux wget xsltproc zlib1g-dev
 
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
